@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class dragBox : MonoBehaviour
 {
+    private inventory inventory;
     private float startPoxX;
     private float startPosY;
     private bool isBeingHeld = false;
 
+    private void Start()
+    {
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<inventory>();
+    }
     private void Update()
     {
         if(isBeingHeld == true)
@@ -38,5 +43,7 @@ public class dragBox : MonoBehaviour
     private void OnMouseUp()
     {
         isBeingHeld = false;
+        //inventory.isFull[0] = false;
+        GameObject.FindGameObjectWithTag("blood").GetComponent<soDumbcheck>().check();
     }
 }

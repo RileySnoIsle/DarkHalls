@@ -8,13 +8,13 @@ public class PickUp : MonoBehaviour
     // Start is called before the first frame update
     private inventory inventory;
     public GameObject itemButton;
-    public Button button;
+    //public Button button;
     // Start is called before the first frame update
     
     void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<inventory>();
-        button.GetComponent<Button>().interactable = false;
+        //button.GetComponent<Button>().interactable = false;
     }
 
 
@@ -27,7 +27,8 @@ public class PickUp : MonoBehaviour
                 if(inventory.isFull[i] == false)
                 {
                     inventory.isFull[i] = true;
-                    button.GetComponent<Button>().interactable = true;
+                    Instantiate(itemButton, new Vector3(inventory.xtransform[i], inventory.ytransform[i], 0), Quaternion.identity);
+                    //button.GetComponent<Button>().interactable = true;
 
                     Destroy(gameObject);
                     break;
