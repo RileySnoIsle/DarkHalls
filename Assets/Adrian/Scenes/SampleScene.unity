@@ -277,6 +277,8 @@ MonoBehaviour:
   - {fileID: 1581586020}
   - {fileID: 0}
   - {fileID: 0}
+  xtransform: []
+  ytransform: []
 --- !u!114 &174495820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,7 +625,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 6819071277512079472, guid: 2b5ec48c76daa0843813165e9b910c80, type: 3}
-  button: {fileID: 1581586022}
 --- !u!212 &652745524
 SpriteRenderer:
   m_ObjectHideFlags: 0
