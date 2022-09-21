@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 3836662847981360807}
+  id: {fileID: 0}
 --- !u!114 &4271516340950588957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08539c2dfcbe5e943b4ce363801a97ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BLOOD: {fileID: 3836662847981360807}
 --- !u!114 &-1568314706576869822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
+  position: 0
 --- !u!114 &8403797162869337251
 MonoBehaviour:
   m_ObjectHideFlags: 0

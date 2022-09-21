@@ -8,6 +8,7 @@ public class dragBox : MonoBehaviour
     private float startPoxX;
     private float startPosY;
     private bool isBeingHeld = false;
+   
 
     private void Start()
     {
@@ -27,6 +28,8 @@ public class dragBox : MonoBehaviour
 
     private void OnMouseDown()
     {
+        
+        gameObject.GetComponent<soDumbcheck>().checkPos();
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 mousePos;
@@ -44,6 +47,7 @@ public class dragBox : MonoBehaviour
     {
         isBeingHeld = false;
         //inventory.isFull[0] = false;
-        GameObject.FindGameObjectWithTag("blood").GetComponent<soDumbcheck>().check();
+        
+        gameObject.GetComponent<soDumbcheck>().check();
     }
 }
