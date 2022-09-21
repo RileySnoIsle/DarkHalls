@@ -18,22 +18,26 @@ public class soDumbcheck : MonoBehaviour
       
     }
     // Update is called once per frame
+
     public void check()
     {
+        if(position != -1) {
+            if (gameObject.transform.position.x != inventory.xtransform[position])
+            {
+                inventory.isFull[position] = false;
+                gameObject.GetComponent<dragBox>().enabled = false;
 
-        if(gameObject.transform.position.x != inventory.xtransform[position])
-        {
-            inventory.isFull[position] = false;
-            
+            }
+            else if (gameObject.transform.position.x != inventory.xtransform[1])
+            {
+                inventory.isFull[1] = false;
+            }
+            else if (gameObject.transform.position.x != inventory.xtransform[2])
+            {
+                inventory.isFull[2] = false;
+            }
         }
-        //else if (gameObject.transform.position.x != inventory.xtransform[1])
-        //{
-        //    inventory.isFull[1] = false;
-        //}
-        //else if (gameObject.transform.position.x != inventory.xtransform[2])
-        //{
-        //    inventory.isFull[2] = false;
-        //}
+        
         //Debug.Log("YES");
     }
     public void checkPos()
@@ -42,16 +46,24 @@ public class soDumbcheck : MonoBehaviour
         if (gameObject.transform.position.x == inventory.xtransform[0])
         {
             position = 0;
+            gameObject.GetComponent<dragBox>().enabled = true;
 
         }
         else if (gameObject.transform.position.x == inventory.xtransform[1])
         {
             position = 1;
+            gameObject.GetComponent<dragBox>().enabled = true;
         }
         else if (gameObject.transform.position.x == inventory.xtransform[2])
         {
             position = 2;
+            gameObject.GetComponent<dragBox>().enabled = true;
         }
+        else
+        {
+            position = -1;
+        }
+
         //Debug.Log("YES");
     }
 }

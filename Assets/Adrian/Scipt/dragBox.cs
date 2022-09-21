@@ -21,9 +21,10 @@ public class dragBox : MonoBehaviour
             Vector3 mousePos;
             mousePos = Input.mousePosition;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-
+            
             this.gameObject.transform.localPosition = new Vector3(mousePos.x - startPoxX, mousePos.y - startPosY, 0);
         }
+       
     }
 
     private void OnMouseDown()
@@ -38,16 +39,19 @@ public class dragBox : MonoBehaviour
 
             startPoxX = mousePos.x - this.transform.localPosition.x;
             startPosY = mousePos.y - this.transform.localPosition.y;
-
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
             isBeingHeld = true;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<CircleCollider2D>().enabled = false ;
+
         }
     }
 
     private void OnMouseUp()
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<CircleCollider2D>().enabled = true;
         isBeingHeld = false;
         //inventory.isFull[0] = false;
-        
+        gameObject.GetComponent<BoxCollider2D>().enabled = true;
         gameObject.GetComponent<soDumbcheck>().check();
     }
 }
