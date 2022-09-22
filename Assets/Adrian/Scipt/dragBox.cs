@@ -41,14 +41,16 @@ public class dragBox : MonoBehaviour
             startPosY = mousePos.y - this.transform.localPosition.y;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             isBeingHeld = true;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<CircleCollider2D>().enabled = false ;
+            //GameObject.FindGameObjectWithTag("Player").GetComponent<CircleCollider2D>().enabled = false ;
 
         }
+
     }
 
     private void OnMouseUp()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<CircleCollider2D>().enabled = true;
+       // GameObject.FindGameObjectWithTag("Player").GetComponent<CircleCollider2D>().enabled = true;
+
         isBeingHeld = false;
         //inventory.isFull[0] = false;
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
