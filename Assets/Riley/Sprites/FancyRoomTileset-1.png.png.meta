@@ -72,6 +72,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -508,6 +509,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      FancyRoomTileset-1.png_1: 9000914307138825455
+      FancyRoomTileset-1.png_14: -4918560969761788983
+      FancyRoomTileset-1.png_5: 329207384122126962
+      FancyRoomTileset-1.png_8: 156365718542771470
+      FancyRoomTileset-1.png_6: -9213192314682905012
+      FancyRoomTileset-1.png_9: 8732707117044401581
+      FancyRoomTileset-1.png_11: -9156145329952329108
+      FancyRoomTileset-1.png_13: 3698393608128813624
+      FancyRoomTileset-1.png_3: -1076724366960753084
+      FancyRoomTileset-1.png_2: -1838477997294589840
+      FancyRoomTileset-1.png_7: -3312497892109447917
+      FancyRoomTileset-1.png_4: -9141823577051874570
+      FancyRoomTileset-1.png_10: 3206948596105009893
+      FancyRoomTileset-1.png_12: -349376988920607231
+      FancyRoomTileset-1.png_0: 2636821724038260713
+      FancyRoomTileset-1.png_15: -2894499101822735164
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

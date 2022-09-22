@@ -36,6 +36,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -220,6 +221,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      AdventureWallsTest-1.png_2: -2079654546984696981
+      AdventureWallsTest-1.png_0: 947155424328216408
+      AdventureWallsTest-1.png_3: -4511647282398756200
+      AdventureWallsTest-1.png_1: -2447302665806653904
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
