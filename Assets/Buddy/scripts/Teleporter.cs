@@ -8,24 +8,14 @@ public class Teleporter : MonoBehaviour
     Rigidbody2D rb2;
     public GameObject Player;
     public GameObject Destination;
-    
-    // Start is called before the first frame update
-    public void Start()
-    {
-        
-        
+    public float posX;
+    public float posY;
 
-
-    }
 
     // Update is called once per frame
     public void Update()
     {
         
-
-
-
-
 
     }
 
@@ -36,7 +26,8 @@ public class Teleporter : MonoBehaviour
         {
             Debug.Log("if this doesnt work, screw c#");
 
-            //transform.localPosition = new ;
+            transform.position = new Vector2(posX, posY );
+            
         }
 
 
