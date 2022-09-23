@@ -13,9 +13,10 @@ public class dragBox : MonoBehaviour
     public GameObject mainCamera;
     private System.Nullable<Vector3> _movementDestination;
 
-    private void Start()
+    public void Start()
     {
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        Debug.Log(mainCamera.tag);
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<inventory>();
         soDumbcheck = GameObject.FindGameObjectWithTag("Player").GetComponent<soDumbcheck>();
     }
@@ -37,8 +38,9 @@ public class dragBox : MonoBehaviour
     {
         
         gameObject.GetComponent<soDumbcheck>().checkPos();
-        
-       
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        Debug.Log(mainCamera.name);
+
         if (Input.GetMouseButtonDown(0))
         {
             //Debug.Log("Left");

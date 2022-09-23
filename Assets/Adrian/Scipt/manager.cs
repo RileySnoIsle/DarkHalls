@@ -17,7 +17,7 @@ public class manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(frame1.GetComponent<requiredColor>().correct == true && 
+        if (frame1.GetComponent<requiredColor>().correct == true &&
             frame2.GetComponent<requiredColor>().correct == true &&
             frame3.GetComponent<requiredColor>().correct == true)
         {
