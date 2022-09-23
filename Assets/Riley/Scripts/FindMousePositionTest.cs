@@ -34,7 +34,7 @@ public class FindMousePositionTest : MonoBehaviour
         Vector3 movement = worldPosition.normalized * movespeed;
 
 
-        if (Input.GetMouseButton(0) == true)
+        if (Input.GetMouseButton(1) == true)
         {
             
             rb2.velocity = movement;

@@ -9,6 +9,7 @@ public class PickUp : MonoBehaviour
     private inventory inventory;
     public GameObject itemButton;
     public id id;
+    private GameObject child;
     //public Button button;
     // Start is called before the first frame update
     
@@ -28,16 +29,20 @@ public class PickUp : MonoBehaviour
                 if(inventory.isFull[i] == false)
                 {
                     inventory.isFull[i] = true;
-                    Instantiate(itemButton, new Vector3(inventory.xtransform[i], inventory.ytransform[i], 0), Quaternion.identity);
+                    //Instantiate(itemButton, new Vector3(inventory.xtransform[i], inventory.ytransform[i], 0), Quaternion.identity);
+                    Instantiate(itemButton, inventory.slots[i].transform, false);
                     //button.GetComponent<Button>().interactable = true;
-                    id.ID++;
-                    
-                    if(id.ID == 3)
+                    if(inventory.slots[i].transform.childCount > 0)
                     {
-                        id.ID = 0;
+                        Debug.Log("Has Child");
+                        child = inventory.slots[i].transform.GetChild(0).gameObject;
+                        Debug.Log(child);
                     }
-                    print(id.ID);
-                    Destroy(gameObject);
+                    
+                    
+                    
+
+                    Destroy(gameObject.gameObject);
                     break;
                 }
             }
