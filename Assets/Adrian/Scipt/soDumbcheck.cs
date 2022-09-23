@@ -22,20 +22,25 @@ public class soDumbcheck : MonoBehaviour
     public void check()
     {
         if(position != -1) {
-            if (gameObject.transform.position.x != inventory.xtransform[position])
+            if (gameObject.transform.parent.name == "slot1") 
             {
-                inventory.isFull[position] = false;
+                inventory.isFull[0] = false;
                 gameObject.GetComponent<dragBox>().enabled = false;
 
             }
-            else if (gameObject.transform.position.x != inventory.xtransform[1])
+            if (gameObject.transform.parent.name == "slot2")
             {
                 inventory.isFull[1] = false;
+                gameObject.GetComponent<dragBox>().enabled = false;
+
             }
-            else if (gameObject.transform.position.x != inventory.xtransform[2])
+            if (gameObject.transform.parent.name == "slot3")
             {
                 inventory.isFull[2] = false;
+                gameObject.GetComponent<dragBox>().enabled = false;
+
             }
+
         }
         
         //Debug.Log("YES");
@@ -43,18 +48,18 @@ public class soDumbcheck : MonoBehaviour
     public void checkPos()
     {
 
-        if (gameObject.transform.position.x == inventory.xtransform[0])
+        if (gameObject.transform.parent.name == "slot1")
         {
             position = 0;
             gameObject.GetComponent<dragBox>().enabled = true;
 
         }
-        else if (gameObject.transform.position.x == inventory.xtransform[1])
+        else if (gameObject.transform.parent.name == "slot2")
         {
             position = 1;
             gameObject.GetComponent<dragBox>().enabled = true;
         }
-        else if (gameObject.transform.position.x == inventory.xtransform[2])
+        else if (gameObject.transform.parent.name == "slot3")
         {
             position = 2;
             gameObject.GetComponent<dragBox>().enabled = true;

@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class dragBox : MonoBehaviour
 {
+    public GameObject parent;
     private inventory inventory;
     private float startPoxX;
     private float startPosY;
     private bool isBeingHeld = false;
-   
+    private soDumbcheck soDumbcheck;
+    public GameObject mainCamera;
+    private System.Nullable<Vector3> _movementDestination;
 
     private void Start()
     {
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<inventory>();
+        soDumbcheck = GameObject.FindGameObjectWithTag("Player").GetComponent<soDumbcheck>();
     }
     private void Update()
     {
-        if(isBeingHeld == true)
+       
+        if (isBeingHeld == true)
         {
             Vector3 mousePos;
             mousePos = Input.mousePosition;
@@ -26,13 +32,16 @@ public class dragBox : MonoBehaviour
         }
        
     }
-
+    
     private void OnMouseDown()
     {
         
         gameObject.GetComponent<soDumbcheck>().checkPos();
+        
+       
         if (Input.GetMouseButtonDown(0))
         {
+            //Debug.Log("Left");
             Vector3 mousePos;
             mousePos = Input.mousePosition;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
@@ -41,19 +50,25 @@ public class dragBox : MonoBehaviour
             startPosY = mousePos.y - this.transform.localPosition.y;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             isBeingHeld = true;
-            //GameObject.FindGameObjectWithTag("Player").GetComponent<CircleCollider2D>().enabled = false ;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D>().enabled = false ;
 
         }
-
+        
     }
 
     private void OnMouseUp()
     {
-       // GameObject.FindGameObjectWithTag("Player").GetComponent<CircleCollider2D>().enabled = true;
-
+        GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D>().enabled = true;
         isBeingHeld = false;
         //inventory.isFull[0] = false;
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
         gameObject.GetComponent<soDumbcheck>().check();
+        //Debug.Log(gameObject);
+        //Debug.Log(gameObject.GetComponent<soDumbcheck>().position);
+        //Debug.Log(mainCamera.transform.GetChild(gameObject.GetComponent<soDumbcheck>().position));
+        mainCamera.transform.GetChild(gameObject.GetComponent<soDumbcheck>().position).gameObject.transform.DetachChildren();
+        
+        
     }
+    
 }

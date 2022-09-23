@@ -6,7 +6,7 @@ public class inventory : MonoBehaviour
 {
     public bool[] isFull;
     public GameObject[] slots;
-
+    public int num = 0;
     public List<float> xtransform;
     public List<float> ytransform;
 
@@ -17,6 +17,9 @@ public class inventory : MonoBehaviour
         {
             xtransform.Add(value.transform.position.x);
             ytransform.Add(value.transform.position.y);
+            value.GetComponent<id>().ID = num;
+            num++;
         }
+        
     }
 }
