@@ -17,8 +17,7 @@ public class inventory : MonoBehaviour
         {
             xtransform.Add(value.transform.position.x);
             ytransform.Add(value.transform.position.y);
-            value.GetComponent<id>().ID = num;
-            num++;
+            
         }
         
     }

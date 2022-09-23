@@ -22,24 +22,23 @@ public class dragBox : MonoBehaviour
     }
     private void Update()
     {
-       
+
         if (isBeingHeld == true)
         {
             Vector3 mousePos;
             mousePos = Input.mousePosition;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-            
+
             this.gameObject.transform.localPosition = new Vector3(mousePos.x - startPoxX, mousePos.y - startPosY, 0);
         }
-       
+
     }
-    
+
     private void OnMouseDown()
     {
-        
+
         gameObject.GetComponent<soDumbcheck>().checkPos();
-        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
-        Debug.Log(mainCamera.name);
+
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -52,10 +51,10 @@ public class dragBox : MonoBehaviour
             startPosY = mousePos.y - this.transform.localPosition.y;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             isBeingHeld = true;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D>().enabled = false ;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D>().enabled = false;
 
         }
-        
+
     }
 
     private void OnMouseUp()
@@ -69,8 +68,8 @@ public class dragBox : MonoBehaviour
         //Debug.Log(gameObject.GetComponent<soDumbcheck>().position);
         //Debug.Log(mainCamera.transform.GetChild(gameObject.GetComponent<soDumbcheck>().position));
         mainCamera.transform.GetChild(gameObject.GetComponent<soDumbcheck>().position).gameObject.transform.DetachChildren();
-        
-        
+
+
     }
-    
+
 }

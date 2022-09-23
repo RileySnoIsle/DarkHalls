@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 342607950507983943}
   - component: {fileID: -2259147749443446487}
   m_Layer: 0
-  m_Name: blood
+  m_Name: joe
   m_TagString: blood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

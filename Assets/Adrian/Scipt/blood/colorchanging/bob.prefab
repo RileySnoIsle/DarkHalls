@@ -14,11 +14,11 @@ GameObject:
   - component: {fileID: 8294348610887117398}
   - component: {fileID: 4271516340950588957}
   - component: {fileID: -5308506944236378958}
-  - component: {fileID: 6777206376808074194}
-  - component: {fileID: -3156131903362421642}
-  - component: {fileID: -2818029163996387423}
+  - component: {fileID: -7161891065258389696}
+  - component: {fileID: -4125221344534279804}
+  - component: {fileID: -3392840708055879695}
   m_Layer: 0
-  m_Name: yellow block of blood
+  m_Name: bob
   m_TagString: blood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.5921569, g: 0.59607846, b: 0.023529414, a: 1}
+  m_Color: {r: 0.023529414, g: 0.59607846, b: 0.03529412, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e453e05ea328848b26809e44c40205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 3836662847981360807, guid: 777baa317f4c6e84fa57b0f09f9bb219, type: 3}
+  itemButton: {fileID: 3836662847981360807, guid: 97d5aabf2b782df45b6adf079a923b39, type: 3}
   id: {fileID: 0}
 --- !u!114 &4271516340950588957
 MonoBehaviour:
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
   position: 0
---- !u!114 &6777206376808074194
+--- !u!114 &-7161891065258389696
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,8 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e8271dd6c87e340ad5c9e5b4dfafbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
---- !u!114 &-3156131903362421642
+  ID: 1
+--- !u!114 &-4125221344534279804
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cbf7421e655e354cb5b6a31cd3e013f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &-2818029163996387423
+--- !u!50 &-3392840708055879695
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

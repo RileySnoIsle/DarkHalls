@@ -13,12 +13,12 @@ GameObject:
   - component: {fileID: 3836662847981360804}
   - component: {fileID: 8294348610887117398}
   - component: {fileID: 4271516340950588957}
-  - component: {fileID: -1568314706576869822}
-  - component: {fileID: 8403797162869337251}
-  - component: {fileID: 724391136102429488}
-  - component: {fileID: 5778333565096672}
+  - component: {fileID: -5308506944236378958}
+  - component: {fileID: -5225870351326281189}
+  - component: {fileID: 5369743817820958064}
+  - component: {fileID: 6238802006206619647}
   m_Layer: 0
-  m_Name: green
+  m_Name: start
   m_TagString: blood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.023529394, g: 0.59607846, b: 0.0358682, a: 1}
+  m_Color: {r: 0.5943396, g: 0.025231387, b: 0.025231387, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e453e05ea328848b26809e44c40205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 3836662847981360807, guid: 2d18c632132f0b9408ef734e8b146606, type: 3}
+  itemButton: {fileID: 3836662847981360807, guid: f80e487a34d03e74db2439f62244ba9f, type: 3}
   id: {fileID: 0}
 --- !u!114 &4271516340950588957
 MonoBehaviour:
@@ -136,14 +136,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3836662847981360807}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08539c2dfcbe5e943b4ce363801a97ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   mainCamera: {fileID: 0}
---- !u!114 &-1568314706576869822
+--- !u!114 &-5308506944236378958
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
   position: 0
---- !u!114 &8403797162869337251
+--- !u!114 &-5225870351326281189
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,8 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e8271dd6c87e340ad5c9e5b4dfafbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 1
---- !u!114 &724391136102429488
+  ID: 2
+--- !u!114 &5369743817820958064
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cbf7421e655e354cb5b6a31cd3e013f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &5778333565096672
+--- !u!50 &6238802006206619647
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

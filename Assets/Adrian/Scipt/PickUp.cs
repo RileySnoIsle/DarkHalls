@@ -32,12 +32,7 @@ public class PickUp : MonoBehaviour
                     //Instantiate(itemButton, new Vector3(inventory.xtransform[i], inventory.ytransform[i], 0), Quaternion.identity);
                     Instantiate(itemButton, inventory.slots[i].transform, false);
                     //button.GetComponent<Button>().interactable = true;
-                    if(inventory.slots[i].transform.childCount > 0)
-                    {
-                        Debug.Log("Has Child");
-                        child = inventory.slots[i].transform.GetChild(0).gameObject;
-                        Debug.Log(child);
-                    }
+                    
                     
                     
                     
